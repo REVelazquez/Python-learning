@@ -76,5 +76,15 @@ print(ejemplo2.format(arrayFormat[1], arrayFormat[3]))
 #ejemplo:
 
 
+nombre= 'Rodrigo'
+accesos= 32
 
+print(f'Hola, {nombre}. Este es su acceso de número {accesos}')
 
+# metodo input()
+# Este metodo lee la línea de entrada, convierte a un string y retorna ese valor. Para leer esa entrada, una caja de texto es mostrada para
+#que el usuario rellene con el contenido solicitado.
+
+name=input('¿Cual es su nombre?')
+
+print('Hola, ' + name)
