@@ -47,3 +47,20 @@ print(type(tupla2), tupla2)
 tupla3= tuple([2, 5, "Jack"])
 
 print(type(tupla3), tupla3)
+
+
+# Range: representa una secuencia inmutable de numeros y es utilizado  como iterador en procedimientos que se necesitan repetir un cierto numero
+# de veces. Pueden ser creada de la siguiente forma: range(start, stop, step). Si el valor start es omitido por defecto sera '0', si en cambio
+# se omite "step" por defecto sera 1, y si este es definido como '0' un "valueError" sera generado.
+# por lo general un "range" se escribe de la siguiente forma:
+# range(10), en donde solo se informa el argemento "stop"
+
+#ejemplo de su uso
+
+arrayFromRange = list(range(10))
+print(type(arrayFromRange), arrayFromRange)
+
+#ejemplo2
+
+tuplaFromRange= tuple(range(10, 21, 2))
+print(type(tuplaFromRange), tuplaFromRange)

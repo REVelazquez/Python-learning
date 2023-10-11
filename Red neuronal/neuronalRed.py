@@ -25,4 +25,5 @@ output= inputs[0]*weights[0]+inputs[1]*weights[1]+inputs[2]*weights[2] + bias
 print(output)
 #el comando anterior hara que aparezca el valor en consola.
 #cada "neurona" tiene solo una "bias", pero cada valor de los inputs tiene su propio peso.
-#para poder obtener el valro que queremos debemos saber como modificar los weights y bias para que el output sea los valores que nosotros queremos.
+#para poder obtener el valro que queremos debemos saber como modificar los weights y
+#bias para que el output sea los valores que nosotros queremos.
