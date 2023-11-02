@@ -1,3 +1,6 @@
+# A tener en cuenta: hay varios ejemplos que imprimen resultados en consola, los mismos pueden ser cortos o largos.
+# dependiendo de si se quiere ver uno u otro hay que comentarlos o no.
+
 # Ahora conoceremos uno de las principales construcciones de loops de Python. 
 
 # For
@@ -17,6 +20,8 @@ for i in range(1, 11):
 
 accesorios=['Llantas de aleación', 
             'Cerraduras eléctricas',
+            'Cerraduras centralizadas',
+            #el elemento anterior es usado solo para dar un ejemplo en un caso de instrucciones
             'Piloto automático',
             'Bancos de cuero', 
             'Aire acondicionado', 
@@ -94,3 +99,45 @@ for clave in data.keys():
     print( 'El precio de ', clave, ' es ', data[clave])
 
 # values funciona de forma similar solo que con los valores de los vehículos, veamos que ocurre en el siguiente caso:
+
+# print(data.values()) => esto es para ver como seria lo que nos devuelve data.values()
+
+valorTotal= 0
+for valor in data.values():
+    valorTotal +=valor
+
+print ('El precio de todo junto es ', valorTotal)
+
+# El utilizar valorTotal +=valor es lo mismo que decir: valorTotal= valorTotal +valor
+
+# Ahora el método items() es más completo, ofreciendo una nueva visualización de los pares (clave, valor) de un diccionario
+
+# print(data.items()) => al igual que lo anterior es para ver que nos devuelve la consola. por lo cual se puede borrar el comentario
+# y lo que sigue y observarlo.
+
+# Siendo que esto nos devuelve tanto clave como valor podemos utilizar la técnica de desempaquetado para crear dos variables de 
+# iteración en apenas un bucle "for", lo que seria de la siguiente manera:
+
+for nombre, valor in data.items():
+    print( f'El vehículo {nombre} cuesta $ {valor}')
+
+# Instrucciones "continue" y "break"
+
+# La instruccion "continue" es utilizada para saltar el bloque de instrucciones actual y retornar a la funcion for. Eso hace que el
+# bucle avance para la próxima iteración, ignorando todo lo que venga después de la instrucción continue.
+# veamos un ejemplo con la lista "accesorios". Para lo mismo usaremos un "if" donde se verificara que el elemento de la lista comience
+# con una determinada letra saltando todos los resultados que no la presenten, en este caso usaremos la "S"
+
+for item in accesorios:
+    if(item[0]!= 'S'):
+        continue
+    print(item)
+
+# si al codigo anterior le agregamos una instrucción "break" al cumplirse la condición se saldra del bucle for, veamos con otra letra.
+
+for item in accesorios:
+    if(item[0] != 'C'):
+        continue
+    print(item)
+    break
+# En este caso el loop en vez de devolvernos dos items que cumplen con la condicion de item[0]='C' nos devuelve 1 y sale del bucle.
