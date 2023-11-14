@@ -30,3 +30,35 @@ def media():
 # función del tipo function. Para llamar la función media() utilizamos la misma sintaxis de las build.in functions
 
 media()
+
+# Ahora, una vez que llamamos a la función, esta nos devolvera el valor calculado previamente.
+
+# Funciones con argumentos:
+
+# Algunas funciones exigen uno o más argumentos para pdoer ejecutar sus instrucciones. Esos pueden ser obligatorios u
+# opcionales.
+
+# Formato patrón:
+# def <nombre>(<arg_1>, <arg_2>, ..., <arg_n>):
+#     <instrucciones>
+
+# Estos argumentos obligatorios no vienen previmante configurados, o sea, con un valor default, por eso
+# necesitan ser especificados cuando la función es llamada. Veamos un ejemplo de función que recibe argumentos.
+
+def media2(valor_1, valor_2, valor_3):
+    valor= (valor_1 + valor_2 + valor_3)/3
+    print("La media es", valor)
+
+# La funcion media2() tiene tres argumentos y necesitan ser informados siempre que la funcion es llamada, o sea,
+# son obligatorios.
+
+media2(2, 5, 8)
+
+# Esta función es ahora una que necesita tener tres argumentos obligatorios si llamamos esa función y pasamos menos de
+# tres argumentos o más de tres ocurrirá un error. Para tener un argumento "default" deberiamos defifnirlos a la hora de 
+# definir la función, por ejemplo, reemplazando 'valor_3' por 'valor_3=3'. En este caso el tercer valor siempre estaria definico 
+# como "3".
+
+# Pero a la vez podriamos llamar la misma funcion con tres argumentos y asignar un nuevo valor para el ultimo argumento,
+# lo que cambiaria el valor default por este otro nuevo que nosotros definimos.
+
