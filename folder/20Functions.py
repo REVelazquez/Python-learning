@@ -62,3 +62,48 @@ media2(2, 5, 8)
 # Pero a la vez podriamos llamar la misma funcion con tres argumentos y asignar un nuevo valor para el ultimo argumento,
 # lo que cambiaria el valor default por este otro nuevo que nosotros definimos.
 
+# Una parte importante cuando trabajamos con funciones de múltiples argumentos es el orden de declaración de estos argumentos
+# cuando llamamos a la función. Ellos deben ser pasados en el orden que fueron definido por la instrucción def y caso sea necesario
+# informar en otro orden, eso debe ser hecho utilizando los nombres de los argumentos de la siguiente forma: media(valor_2=3, valor_1=4)
+
+# Los argumentos de una función pueden también tener formatos diversos(listas, tupplas, diccionarios, etc). El ejemplo de abajo modifica
+# la funcion media() (la que sera cambiada de nombre) para calcular la media aritmética de los valores de una lista cualquiera.
+
+def mediaLista(lista):
+    valor = sum(lista)/ len(lista)
+    print('El valor medio es: ', valor)
+
+# Hay que tener en cuenta que usamos tres build in functions, sum(), len() y print()
+
+mediaLista([1, 2, 3, 4, 5, 6, 7, 8, 9])
+
+# En algunas situaciones puede ser necesario definir una función en la cual no se sabe cuantos argumentos el usuario va a pasar. En estos casos
+# podemos usar la forma especial *args para capturar todos los argumentos que serán pasados para la función.
+
+# Por ejemplo:
+
+def suma (*args):
+    suma=0
+    for i in args:
+        suma += i
+    print('El resultado es:', suma)
+
+suma(1, 2)
+
+# Ahora llamaremos la misma funcion con otros valores
+
+suma(10, 3, 6)
+
+# Extra:
+
+# datetime: este modulo pone a disposición clases para manipulación de datas y horas en python.
+
+# para usarlo hacemos " import datetime"
+
+import datetime
+now= datetime.datetime.now()
+
+print(now)
+
+# A este objeto "now" podemos separarlo en año:year, mes, dia, hora, minuto, segundo, dependiendo de
+# a que queramos acceder y siempre haciendolo en ingles
