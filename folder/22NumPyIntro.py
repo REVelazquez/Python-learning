@@ -59,3 +59,10 @@ import numpy as np
 #   Una vez  hecho esto, basta digitar el alias (np) seguido del carácter '.' y después el nombre del recurso.
 
 print(np.arange(10))
+
+# -------------- numpy.arange([start, ]stop, [step, ]dtype= None) --------------
+
+#   Retorna valores espaciados de forma uniforme dentro de un determinado intervalo. Los valores son generados dentro del intervalo semiabierto
+# [start, stop), o sea, el invertalo ingluye "start" y excluye "stop". Para argumentos enteros, la función es equivalente a la built-in function
+# range() de la biblioteca patrón de Python, pero retornando un array NumPy
+
