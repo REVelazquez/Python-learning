@@ -110,3 +110,21 @@ print(array_txt.shape)
 
 array_txt2=np.loadtxt(fname='archivo2.txt', delimiter= ';', dtype= int)
 print(array_txt2)
+#   Anteriormente se vio como crear arrays Numpy de dos dimensiones a partir de datos externos. Ahora haremos lo mismo utilizando secuendias:
+#   Considerese el siguiente código:
+
+datos=[
+    ['Llantas de aleación', 'Cerraduras eléctricas', 'Piloto automático'],
+    ['Central multimedia', 'Techo panorámico', 'Frenos ABS'],
+    ['Piloto automático', 'Sensor crepuscular', 'Frenos ABS'],
+]
+
+#   Para informar a la función array() que queremos crear un array bidimensional basta parasar como argumento una secuancia anidada. En el ejemplo
+# de arriba la lista datos es una lista que contiene otras tres listas
+
+accesorios =np.array(datos)
+print(accesorios)
+
+#   Si utilizamos el atributo shpa, deberia dar (3, 3), es decir un array de dos dimensiones y cada dimension de tamaño 3, o también se puede decir:
+# una matriz con 3 líneas y 3 columnas.
+print(accesorios.shape)
