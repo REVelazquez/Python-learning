@@ -116,4 +116,16 @@ print(datos[select]) # Nos devolverá valores que cumplen las condiciones
 
 print(datos[~select]) # Nos devolverá todos los valores que no cumplan las condiciones
 
+#   Para tener como retorno un array en el formato bidimensional necesitamos pasar las informaciones de slices por eje, como se hizo anteriormente.
+#   Vamos a suponer que necesitamos seleccionar las columnas que contienen los elementos 'A', 'D', y '2'. Observemos la diferencias entre el código anterior y el de abajo:
+
+select=(datos[0]=='A') | (datos[0] == 'D') | (datos[1] == '2')
+print(select)
 print(datos[:, select])
+print (datos[:, ~select])
+
+#   Notamos que el array booleano ahora es unidimensional y debe ser pasado como índice del eje 1(columnas). Y una observación importante: EL ARRAY BOOLEANO DEBE TENER EL MISMO TAMAÑO DEL EJE DEL ARRAY QUE ESTÁ SIENDO INDEXADO. En el ejemplo
+# vemos un array booleano con cinco elemento yestamos indexando el eje 1 que también tiene cinco elementos
+
+#   Otro punto a tener en cuenta es que el código de selección ahora informa el slice para el eje 0(todas las líneas) y para el eje 1(Array booleano).
+#   Para finalizar esta sección vamos a crear un slice del array "datos"
