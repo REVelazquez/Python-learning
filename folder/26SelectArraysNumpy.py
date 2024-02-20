@@ -128,4 +128,14 @@ print (datos[:, ~select])
 # vemos un array booleano con cinco elemento yestamos indexando el eje 1 que también tiene cinco elementos
 
 #   Otro punto a tener en cuenta es que el código de selección ahora informa el slice para el eje 0(todas las líneas) y para el eje 1(Array booleano).
-#   Para finalizar esta sección vamos a crear un slice del array "datos"
+#   Para finalizar esta sección vamos a crear un slice del array "datos" para obtener una visualización de los elementos que están en las columnas con strings que representen números pares, y vamos a hacer eso con arrays booleanos. Para eso 
+# podemos utilizar el array nmeros que está en el formato numérico para generar el array booleano que necesitamos.
+
+select=numeros% 2 == 0
+print(select) # esto sera[False True False True False]
+
+#   Ahora basta hacer la selección considerando todos los elementos del eje 0. recordando que el operador % retorna el resto de la división entre dos números.
+
+print(datos[:, select])# retornara:
+#   [['B' 'D']
+#    ['2' '4']]
