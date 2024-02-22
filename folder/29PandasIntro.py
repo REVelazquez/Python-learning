@@ -144,4 +144,15 @@ print(dataset3) # Si bien el output es mas extenso pondre el resultado que da al
 #   Este codigo lee el archivo y carga su contenido en un DataFrame de Pandas que recibe el nombre de dataset3. La última linea del código se
 # utiliza la función head(), la cual  retorna las primeras "n" líneas de un DataFrame o Series. Esta funcionalidad es útil para verificar de 
 # forma rápida si tu dataset posee el tipo ciertos de datos o si fue importado de forma correcta. Cuando esta función se utiliza sin parámetro
-# genera una visualización de las cinco primeras líneas.
+# genera una visualización de las cinco primeras líneas. Si se quiere visualizar un número diferente  de líneas de la parte inicial del DataFrame,
+# basta informar el número total de líneas que deseas visualizar.
+
+dataset =pd.read_csv('db.csv', sep= ';', index_col=0)
+dataset.head(10)
+
+print(dataset)
+
+#   La diferencia entre estos dos codigos es que en el primero tenemos un índice numérico que comienza en cero. En el segundo no lo tenemos visible, en 
+# lugar de los índices tenemos los nombres de los carros como etiquetas de las líneas del DataFrame. Esto ocurre por la utilización de "index_col" en la
+# función read_csv(). Lo que indica cual o cuales serán usadas como etiquetas de línea del DataFrame. El valor cero informa que para la función que la 
+# primera columna del archivo CSV debe ser utilizada como etiqueta de las líneas del DataFrame. Hablaremos un poco más sobre índices en la próxima sección.
